@@ -1,2 +1,2 @@
 # Romanizer
-Helpful utility for extracting/unpacking and organizing your rom files.
+Helpful utility for extracting/unpacking and organizing your Switch rom files.
