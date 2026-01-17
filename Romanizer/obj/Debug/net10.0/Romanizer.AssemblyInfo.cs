@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Romanizer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d5051c2698a1111c0bd27da25c96db190c50adb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+388980745df4552ce98d7a500c2277d571011388")]
 [assembly: System.Reflection.AssemblyProductAttribute("Romanizer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Romanizer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

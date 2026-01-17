@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Romanizer;
 
 class Program
 {
@@ -14,12 +15,12 @@ class Program
         //Setup Dependency Injection
         var services = new ServiceCollection();
         services.AddSingleton<IConfiguration>(configuration);
-        services.AddSingleton<RomanizerApp>();
+        services.AddSingleton<MainApplication>();
 
         var serviceProvider = services.BuildServiceProvider();
 
         // Run the application
-        var app = serviceProvider.GetRequiredService<RomanizerApp>();
+        var app = serviceProvider.GetRequiredService<MainApplication>();
         app.Run();
     }
 }
