@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Romanizer;
+using Romanizer.Workers;
 
 class Program
 {
@@ -16,6 +17,7 @@ class Program
         var services = new ServiceCollection();
         services.AddSingleton<IConfiguration>(configuration);
         services.AddSingleton<MainApplication>();
+        services.AddSingleton<FTPWorker>();
 
         var serviceProvider = services.BuildServiceProvider();
 

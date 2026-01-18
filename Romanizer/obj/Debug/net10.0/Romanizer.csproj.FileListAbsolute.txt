@@ -28,3 +28,4 @@ C:\GIT\Romanizer\Romanizer\obj\Debug\net10.0\Romanizer.pdb
 C:\GIT\Romanizer\Romanizer\obj\Debug\net10.0\Romanizer.genruntimeconfig.cache
 C:\GIT\Romanizer\Romanizer\obj\Debug\net10.0\ref\Romanizer.dll
 c:\GIT\Romanizer\Romanizer\bin\Debug\net10.0\SharpCompress.dll
+C:\GIT\Romanizer\Romanizer\bin\Debug\net10.0\FluentFTP.dll

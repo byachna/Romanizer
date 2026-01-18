@@ -16,21 +16,26 @@ namespace Romanizer
 
         public void Run()
         {
-            GetDirectoryList();
-        }
+            Utilities.WriteMessage($"\r\nChecking FTP server...", ConsoleColor.Magenta);
+            var ftpClient = new Workers.FTPWorker(_configuration);
+            ftpClient.ConnectAndDownload();
 
-        /// <summary>
-        /// Retrieves the list of directories to process from appsettings.json
-        /// </summary>
-        private void GetDirectoryList()
-        {
+            Utilities.WriteMessage($"\r\nFTP server processing complete!\r\n", ConsoleColor.Magenta);
+            
             var appSettings = _configuration.GetSection("AppSettings").Get<AppSettings>()
                 ?? new AppSettings();
 
-            var parentInputDirectory = appSettings.Directories.InputDirectory;
+            var inputDirectory = appSettings.Directories.InputDirectory;
 
-            //Process root directory for any files directly inside it
-            ProcessDirectory(parentInputDirectory);
+            if (!Directory.Exists(inputDirectory))
+            {
+                Utilities.WriteMessage($"Input directory does not exist: {inputDirectory}", ConsoleColor.Red);
+                return;
+            }
+
+            Utilities.WriteMessage($"Starting processing of input directory: {inputDirectory}", ConsoleColor.Magenta);
+
+            ProcessDirectory(inputDirectory);
         }
 
         /// <summary>
